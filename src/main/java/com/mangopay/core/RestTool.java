@@ -546,7 +546,7 @@ public class RestTool {
             return true;
         }
 
-        if(classOfT.getName().equals(BankingAlias.class.getName()) && fieldName.equals("Details")) {
+        if (classOfT.getName().equals(BankingAlias.class.getName()) && fieldName.equals("Details")) {
             return true;
         }
 
@@ -601,10 +601,18 @@ public class RestTool {
                         String userType = entry.getValue().getAsString();
 
                         if (userType.equals(PersonType.NATURAL.toString())) {
-                            result = (T) new UserNatural();
+                            if (root.getConfig().getApiVersion().equals(Configuration.VERSION_2)) {
+                                result = (T) new LegacyUserNatural();
+                            } else {
+                                result = (T) new UserNatural();
+                            }
                             break;
                         } else if (userType.equals(PersonType.LEGAL.toString())) {
-                            result = (T) new UserLegal();
+                            if (root.getConfig().getApiVersion().equals(Configuration.VERSION_2)) {
+                                result = (T) new LegacyUserLegal();
+                            } else {
+                                result = (T) new UserLegal();
+                            }
                             break;
                         } else {
                             throw new Exception(String.format("Unknown type of user: %s", entry.getValue().getAsString()));
