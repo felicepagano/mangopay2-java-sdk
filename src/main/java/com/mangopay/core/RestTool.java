@@ -584,7 +584,7 @@ public class RestTool {
                     } else if (entry.getKey().equals("Resource")) {
                         resp.setResource(entry.getValue().toString());
                     } else if (entry.getKey().equals("RequestURL")) {
-                        resp.setRequestURL(entry.getValue().toString());
+                        resp.setRequestUrl(entry.getValue().toString());
                     }
 
                 }
@@ -840,7 +840,7 @@ public class RestTool {
             }
 
 
-            //Get Response	
+            //Get Response
             this.responseCode = connection.getResponseCode();
             InputStream is;
             if (this.responseCode != 200) {
