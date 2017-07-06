@@ -16,62 +16,62 @@ public class LegacyUserLegal extends User {
     /**
      * Name of this user.
      */
-    private String Name;
+    public String Name;
 
     /**
      * Type of legal user.
      */
-    private LegalPersonType LegalPersonType;
+    public LegalPersonType LegalPersonType;
 
     /**
      * Headquarters address.
      */
-    private String HeadquartersAddress;
+    public String HeadquartersAddress;
 
     /**
      * Legal representative first name.
      */
-    private String LegalRepresentativeFirstName;
+    public String LegalRepresentativeFirstName;
 
     /**
      * Legal representative last name.
      */
-    private String LegalRepresentativeLastName;
+    public String LegalRepresentativeLastName;
 
     /**
      * Legal representative address.
      */
-    private String LegalRepresentativeAddress;
+    public String LegalRepresentativeAddress;
 
     /**
      * Legal representative email.
      */
-    private String LegalRepresentativeEmail;
+    public String LegalRepresentativeEmail;
 
     /**
      * Legal representative birthday.
      */
-    private long LegalRepresentativeBirthday;
+    public long LegalRepresentativeBirthday;
 
     /**
      * Legal representative nationality.
      */
-    private CountryIso LegalRepresentativeNationality;
+    public CountryIso LegalRepresentativeNationality;
 
     /**
      * Legal representative country of residence.
      */
-    private CountryIso LegalRepresentativeCountryOfResidence;
+    public CountryIso LegalRepresentativeCountryOfResidence;
 
     /**
      * Statute.
      */
-    private String Statute;
+    public String Statute;
 
     /**
      * Proof of registration.
      */
-    private String ProofOfRegistration;
+    public String ProofOfRegistration;
 
     /**
      * Shareholder declaration.

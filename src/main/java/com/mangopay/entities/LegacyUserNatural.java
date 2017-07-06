@@ -14,42 +14,42 @@ public class LegacyUserNatural extends User {
     /**
      * First name.
      */
-    private String FirstName;
+    public String FirstName;
 
     /**
      * Last name.
      */
-    private String LastName;
+    public String LastName;
 
     /**
      * Address.
      */
-    private String Address;
+    public String Address;
 
     /**
      * Date of birth (UNIX timestamp).
      */
-    private long Birthday;
+    public long Birthday;
 
     /**
      * Place of birth.
      */
-    private String Birthplace;
+    public String Birthplace;
 
     /**
      * User's country.
      */
-    private CountryIso Nationality;
+    public CountryIso Nationality;
 
     /**
      * Country of residence.
      */
-    private CountryIso CountryOfResidence;
+    public CountryIso CountryOfResidence;
 
     /**
      * User's occupation.
      */
-    private String Occupation;
+    public String Occupation;
 
     /**
      * Income ranges:
@@ -72,7 +72,7 @@ public class LegacyUserNatural extends User {
     /**
      * Income range. One of UserNatural.IncomeRanges constants.
      */
-    private Integer IncomeRange;
+    public Integer IncomeRange;
 
     /**
      * Proof of identity.
