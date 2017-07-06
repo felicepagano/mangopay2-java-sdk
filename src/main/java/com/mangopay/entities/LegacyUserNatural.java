@@ -1,12 +1,8 @@
 package com.mangopay.entities;
 
-import com.google.gson.annotations.SerializedName;
-import com.mangopay.core.Address;
 import com.mangopay.core.enumerations.CountryIso;
 
-import java.lang.reflect.Type;
 import java.util.ArrayList;
-import java.util.Map;
 
 import static com.mangopay.core.enumerations.PersonType.NATURAL;
 
@@ -18,50 +14,42 @@ public class LegacyUserNatural extends User {
     /**
      * First name.
      */
-    @SerializedName("FirstName")
-    private String firstName;
+    private String FirstName;
 
     /**
      * Last name.
      */
-    @SerializedName("LastName")
-    private String lastName;
+    private String LastName;
 
     /**
      * Address.
      */
-    @SerializedName("Address")
-    private String address;
+    private String Address;
 
     /**
      * Date of birth (UNIX timestamp).
      */
-    @SerializedName("Birthday")
-    private long birthday;
+    private long Birthday;
 
     /**
      * Place of birth.
      */
-    @SerializedName("Birthplace")
-    private String birthplace;
+    private String Birthplace;
 
     /**
      * User's country.
      */
-    @SerializedName("Nationality")
-    private CountryIso nationality;
+    private CountryIso Nationality;
 
     /**
      * Country of residence.
      */
-    @SerializedName("CountryOfResidence")
-    private CountryIso countryOfResidence;
+    private CountryIso CountryOfResidence;
 
     /**
      * User's occupation.
      */
-    @SerializedName("Occupation")
-    private String occupation;
+    private String Occupation;
 
     /**
      * Income ranges:
@@ -84,20 +72,17 @@ public class LegacyUserNatural extends User {
     /**
      * Income range. One of UserNatural.IncomeRanges constants.
      */
-    @SerializedName("IncomeRange")
-    private Integer incomeRange;
+    private Integer IncomeRange;
 
     /**
      * Proof of identity.
      */
-    @SerializedName("ProofOfIdentity")
-    protected String proofOfIdentity;
+    protected String ProofOfIdentity;
 
     /**
      * Proof of address.
      */
-    @SerializedName("ProofOfAddress")
-    protected String proofOfAddress;
+    protected String ProofOfAddress;
 
     /**
      * Instantiates new UserNatural object.
@@ -107,91 +92,91 @@ public class LegacyUserNatural extends User {
     }
 
     public String getFirstName() {
-        return firstName;
+        return FirstName;
     }
 
     public void setFirstName(String firstName) {
-        this.firstName = firstName;
+        this.FirstName = firstName;
     }
 
     public String getLastName() {
-        return lastName;
+        return LastName;
     }
 
     public void setLastName(String lastName) {
-        this.lastName = lastName;
+        this.LastName = lastName;
     }
 
     public String getAddress() {
-        return address;
+        return Address;
     }
 
     public void setAddress(String address) {
-        this.address = address;
+        this.Address = address;
     }
 
     public long getBirthday() {
-        return birthday;
+        return Birthday;
     }
 
     public void setBirthday(long birthday) {
-        this.birthday = birthday;
+        this.Birthday = birthday;
     }
 
     public String getBirthplace() {
-        return birthplace;
+        return Birthplace;
     }
 
     public void setBirthplace(String birthplace) {
-        this.birthplace = birthplace;
+        this.Birthplace = birthplace;
     }
 
     public CountryIso getNationality() {
-        return nationality;
+        return Nationality;
     }
 
     public void setNationality(CountryIso nationality) {
-        this.nationality = nationality;
+        this.Nationality = nationality;
     }
 
     public CountryIso getCountryOfResidence() {
-        return countryOfResidence;
+        return CountryOfResidence;
     }
 
     public void setCountryOfResidence(CountryIso countryOfResidence) {
-        this.countryOfResidence = countryOfResidence;
+        this.CountryOfResidence = countryOfResidence;
     }
 
     public String getOccupation() {
-        return occupation;
+        return Occupation;
     }
 
     public void setOccupation(String occupation) {
-        this.occupation = occupation;
+        this.Occupation = occupation;
     }
 
     public Integer getIncomeRange() {
-        return incomeRange;
+        return IncomeRange;
     }
 
     public void setIncomeRange(Integer incomeRange) {
-        this.incomeRange = incomeRange;
+        this.IncomeRange = incomeRange;
     }
 
     public String getProofOfIdentity() {
-        return proofOfIdentity;
+        return ProofOfIdentity;
     }
 
     public void setProofOfIdentity(String proofOfIdentity) {
-        this.proofOfIdentity = proofOfIdentity;
+        this.ProofOfIdentity = proofOfIdentity;
     }
 
     public String getProofOfAddress() {
-        return proofOfAddress;
+        return ProofOfAddress;
     }
 
     public void setProofOfAddress(String proofOfAddress) {
-        this.proofOfAddress = proofOfAddress;
+        this.ProofOfAddress = proofOfAddress;
     }
 
     /**

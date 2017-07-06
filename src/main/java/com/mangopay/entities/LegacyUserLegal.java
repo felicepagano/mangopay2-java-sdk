@@ -1,6 +1,5 @@
 package com.mangopay.entities;
 
-import com.google.gson.annotations.SerializedName;
 import com.mangopay.core.enumerations.CountryIso;
 import com.mangopay.core.enumerations.LegalPersonType;
 
@@ -17,80 +16,67 @@ public class LegacyUserLegal extends User {
     /**
      * Name of this user.
      */
-    @SerializedName("Name")
-    private String name;
+    private String Name;
 
     /**
      * Type of legal user.
      */
-    @SerializedName("LegalPersonType")
-    private LegalPersonType legalPersonType;
+    private LegalPersonType LegalPersonType;
 
     /**
      * Headquarters address.
      */
-    @SerializedName("HeadquartersAddress")
-    private String headquartersAddress;
+    private String HeadquartersAddress;
 
     /**
      * Legal representative first name.
      */
-    @SerializedName("LegalRepresentativeFirstName")
-    private String legalRepresentativeFirstName;
+    private String LegalRepresentativeFirstName;
 
     /**
      * Legal representative last name.
      */
-    @SerializedName("LegalRepresentativeLastName")
-    private String legalRepresentativeLastName;
+    private String LegalRepresentativeLastName;
 
     /**
      * Legal representative address.
      */
-    @SerializedName("LegalRepresentativeAddress")
-    private String legalRepresentativeAddress;
+    private String LegalRepresentativeAddress;
 
     /**
      * Legal representative email.
      */
-    @SerializedName("LegalRepresentativeEmail")
-    private String legalRepresentativeEmail;
+    private String LegalRepresentativeEmail;
 
     /**
      * Legal representative birthday.
      */
-    @SerializedName("LegalRepresentativeBirthday")
-    private long legalRepresentativeBirthday;
+    private long LegalRepresentativeBirthday;
 
     /**
      * Legal representative nationality.
      */
-    @SerializedName("LegalRepresentativeNationality")
-    private CountryIso legalRepresentativeNationality;
+    private CountryIso LegalRepresentativeNationality;
 
     /**
      * Legal representative country of residence.
      */
-    @SerializedName("LegalRepresentativeCountryOfResidence")
-    private CountryIso legalRepresentativeCountryOfResidence;
+    private CountryIso LegalRepresentativeCountryOfResidence;
 
     /**
      * Statute.
      */
-    @SerializedName("Statute")
-    private String statute;
+    private String Statute;
 
     /**
      * Proof of registration.
      */
-    @SerializedName("ProofOfRegistration")
-    private String proofOfRegistration;
+    private String ProofOfRegistration;
 
     /**
      * Shareholder declaration.
      */
-    @SerializedName("ShareholderDeclaration")
-    public String shareholderDeclaration;
+    public String ShareholderDeclaration;
 
     /**
      * Instantiates new LegacyUserLegal object.
@@ -100,107 +86,107 @@ public class LegacyUserLegal extends User {
     }
 
     public String getName() {
-        return name;
+        return Name;
     }
 
     public void setName(String name) {
-        this.name = name;
+        this.Name = name;
     }
 
     public LegalPersonType getLegalPersonType() {
-        return legalPersonType;
+        return LegalPersonType;
     }
 
     public void setLegalPersonType(LegalPersonType legalPersonType) {
-        this.legalPersonType = legalPersonType;
+        this.LegalPersonType = legalPersonType;
     }
 
     public String getHeadquartersAddress() {
-        return headquartersAddress;
+        return HeadquartersAddress;
     }
 
     public void setHeadquartersAddress(String headquartersAddress) {
-        this.headquartersAddress = headquartersAddress;
+        this.HeadquartersAddress = headquartersAddress;
     }
 
     public String getLegalRepresentativeFirstName() {
-        return legalRepresentativeFirstName;
+        return LegalRepresentativeFirstName;
     }
 
     public void setLegalRepresentativeFirstName(String legalRepresentativeFirstName) {
-        this.legalRepresentativeFirstName = legalRepresentativeFirstName;
+        this.LegalRepresentativeFirstName = legalRepresentativeFirstName;
     }
 
     public String getLegalRepresentativeLastName() {
-        return legalRepresentativeLastName;
+        return LegalRepresentativeLastName;
     }
 
     public void setLegalRepresentativeLastName(String legalRepresentativeLastName) {
-        this.legalRepresentativeLastName = legalRepresentativeLastName;
+        this.LegalRepresentativeLastName = legalRepresentativeLastName;
     }
 
     public String getLegalRepresentativeAddress() {
-        return legalRepresentativeAddress;
+        return LegalRepresentativeAddress;
     }
 
     public void setLegalRepresentativeAddress(String legalRepresentativeAddress) {
-        this.legalRepresentativeAddress = legalRepresentativeAddress;
+        this.LegalRepresentativeAddress = legalRepresentativeAddress;
     }
 
     public String getLegalRepresentativeEmail() {
-        return legalRepresentativeEmail;
+        return LegalRepresentativeEmail;
     }
 
     public void setLegalRepresentativeEmail(String legalRepresentativeEmail) {
-        this.legalRepresentativeEmail = legalRepresentativeEmail;
+        this.LegalRepresentativeEmail = legalRepresentativeEmail;
     }
 
     public long getLegalRepresentativeBirthday() {
-        return legalRepresentativeBirthday;
+        return LegalRepresentativeBirthday;
     }
 
     public void setLegalRepresentativeBirthday(long legalRepresentativeBirthday) {
-        this.legalRepresentativeBirthday = legalRepresentativeBirthday;
+        this.LegalRepresentativeBirthday = legalRepresentativeBirthday;
     }
 
     public CountryIso getLegalRepresentativeNationality() {
-        return legalRepresentativeNationality;
+        return LegalRepresentativeNationality;
     }
 
     public void setLegalRepresentativeNationality(CountryIso legalRepresentativeNationality) {
-        this.legalRepresentativeNationality = legalRepresentativeNationality;
+        this.LegalRepresentativeNationality = legalRepresentativeNationality;
     }
 
     public CountryIso getLegalRepresentativeCountryOfResidence() {
-        return legalRepresentativeCountryOfResidence;
+        return LegalRepresentativeCountryOfResidence;
     }
 
     public void setLegalRepresentativeCountryOfResidence(CountryIso legalRepresentativeCountryOfResidence) {
-        this.legalRepresentativeCountryOfResidence = legalRepresentativeCountryOfResidence;
+        this.LegalRepresentativeCountryOfResidence = legalRepresentativeCountryOfResidence;
     }
 
     public String getStatute() {
-        return statute;
+        return Statute;
     }
 
     public void setStatute(String statute) {
-        this.statute = statute;
+        this.Statute = statute;
     }
 
     public String getProofOfRegistration() {
-        return proofOfRegistration;
+        return ProofOfRegistration;
     }
 
     public void setProofOfRegistration(String proofOfRegistration) {
-        this.proofOfRegistration = proofOfRegistration;
+        this.ProofOfRegistration = proofOfRegistration;
     }
 
     public String getShareholderDeclaration() {
-        return shareholderDeclaration;
+        return ShareholderDeclaration;
     }
 
     public void setShareholderDeclaration(String shareholderDeclaration) {
-        this.shareholderDeclaration = shareholderDeclaration;
+        this.ShareholderDeclaration = shareholderDeclaration;
     }
 
     /**

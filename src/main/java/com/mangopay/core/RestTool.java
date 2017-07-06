@@ -435,7 +435,7 @@ public class RestTool {
     }
 
     private void readResponseHeaders(HttpURLConnection conn) {
-        for (Map.Entry<String, List<String>> k : conn.getHeaderFields().entrySet()) {
+        for (Entry<String, List<String>> k : conn.getHeaderFields().entrySet()) {
             for (String v : k.getValue()) {
 
                 if (this.debugMode) logger.info("Response header: {}", k.getKey() + ":" + v);
@@ -478,8 +478,11 @@ public class RestTool {
 
         ArrayList<String> readOnlyProperties = entity.getReadOnlyProperties();
 
-        String fieldName = "";
-        for (Field f : entity.getClass().getFields()) {
+        List<Field> fields = getAllFields(entity.getClass());
+
+        String fieldName;
+        for (Field f : fields) {
+            f.setAccessible(true);
 
             boolean isList = false;
             for (Class<?> i : f.getType().getInterfaces()) {
@@ -529,6 +532,16 @@ public class RestTool {
         }
 
         return result;
+    }
+
+    private List<Field> getAllFields(Class<?> c) {
+        List<Field> fields = new ArrayList<>();
+        fields.addAll(Arrays.asList(c.getDeclaredFields()));
+        while (c.getSuperclass() != null) {
+            fields.addAll(Arrays.asList(c.getSuperclass().getDeclaredFields()));
+            c = c.getSuperclass();
+        }
+        return fields;
     }
 
     private <T> Boolean canReadSubRequestData(Class<T> classOfT, String fieldName) {
@@ -627,7 +640,10 @@ public class RestTool {
             Map<String, Type> subObjects = ((Dto) result).getSubObjects();
             Map<String, Map<String, Map<String, Class<?>>>> dependentObjects = ((Dto) result).getDependentObjects();
 
-            for (Field f : result.getClass().getFields()) {
+            List<Field> fields = getAllFields(result.getClass());
+
+            for (Field f : fields) {
+                f.setAccessible(true);
                 String name = f.getName();
 
                 boolean isList = false;
@@ -652,6 +668,7 @@ public class RestTool {
                                 for (Entry<String, Class<?>> e : targetObjectsDef.entrySet()) {
 
                                     Field targetField = classOfT.getDeclaredField(e.getKey());
+                                    targetField.setAccessible(true);
 
                                     if (isList) {
                                         targetField.set(result, Arrays.asList(castResponseToEntity(e.getValue(), response, true)));
@@ -772,7 +789,6 @@ public class RestTool {
 
             throw e;
         }
-
     }
 
     private <T extends Dto> List<T> doRequestList(Class<T[]> classOfT, Class<T> classOfTItem, String urlMethod, Pagination pagination) throws Exception {
